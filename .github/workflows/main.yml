@@ -27,9 +27,10 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v2.8.0
         with:
-          context: ./
-          file: ./Dockerfile
+          context: .
+          file: Dockerfile
           push: true
-          tags: |
-            dnpimentel/api-currency-register:latest
-            dnpimentel/api-currency-register:v${{ github.run_number }}
+          tags: dnpimentel/api-currency-register:latest
+#           |
+#             dnpimentel/api-currency-register:latest
+#             dnpimentel/api-currency-register:v${{ github.run_number }}
