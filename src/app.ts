@@ -29,7 +29,7 @@ class App {
     this.app.use('/route/', this.currencyController.router);
 
     this.app.use('/', (req, res) => {
-      res.send('Hello Crai');
+      res.send('index');
     });
 
     this.app.use('*', (req, res) => {
